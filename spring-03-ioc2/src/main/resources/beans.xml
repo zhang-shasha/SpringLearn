@@ -11,4 +11,14 @@
         <!--参数名的形式-->
         <constructor-arg name="name" value="zhang"/>
     </bean>
+    <!--alias别名-->
+    <alias name="student" alias="stu"/>
+    <!--
+        id:唯一标识符
+        class:全限定名
+        name:更高级的别名，支持多个别名 、分割别名
+        -->
+    <bean id="student" class="com.hbuas.pojo.Student">
+        <property name="name" value="QWER"/>
+    </bean>
 </beans>
