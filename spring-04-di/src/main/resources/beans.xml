@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="address" class="com.hbuas.pojo.Address">
+        <property name="address" value="埼玉县"/>
+    </bean>
+    <bean id="student" class="com.hbuas.pojo.Student">
+        <!--普通类型注入-->
+        <property name="name" value="zhang"/>
+        <!--Bean注入-->
+        <property name="address" ref="address"/>
+        <!--数组注入-->
+        <property name="books">
+            <array>
+                <value>book1</value>
+                <value>book2</value>
+                <value>book3</value>
+            </array>
+        </property>
+        <!--集合注入-->
+        <property name="hobby">
+            <list>
+                <value>hob1</value>
+                <value>hob2</value>
+                <value>hob3</value>
+            </list>
+        </property>
+        <!--Map注入-->
+        <property name="cards">
+            <map>
+                <entry key="idcard" value="320305"/>
+                <entry key="stucard" value="2018117036"/>
+            </map>
+        </property>
+        <!--Set注入-->
+        <property name="games">
+            <set>
+                <value>LOL</value>
+                <value>DNF</value>
+                <value>QQSpeed</value>
+            </set>
+        </property>
+        <!--null注入-->
+        <property name="wife">
+            <null/>
+        </property>
+        <!--Properties注入-->
+        <property name="info">
+            <props>
+                <prop key="username">root</prop>
+                <prop key="password">87704560</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>
