@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--引入注解-->
+    <context:annotation-config/>
+
+    <bean id = "teacher" class="com.hbuas.pojo.Teacher">
+        <property name="name" value="HU"/>
+        <property name="age" value="23"/>
+    </bean>
+    <!--自动装配-->
+    <bean id = "student" class="com.hbuas.pojo.Student">
+        <property name="name" value="zhang"/>
+        <property name="age" value="18"/>
+    </bean>
+</beans>
